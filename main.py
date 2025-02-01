@@ -17,7 +17,7 @@ if CITY:
     # Fetch Weather Data
     url = f"{BASE_URL}appid={API_KEY}&q={CITY.replace(' ', '%20')}&units=metric"
     response = requests.get(url).json()
-    
+
     if response.get("cod") == 200:
         # Extract Data
         temp_celsius = response['main']['temp']
